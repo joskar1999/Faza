@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/data_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="4">
+
+        <ImageView
+            android:id="@+id/moon_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/moon_image"
+            android:src="@drawable/n574pm" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_layout"
+        app:layout_constraintVertical_weight="7">
+
+        <TextView
+            android:id="@+id/phase_percentage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#E3E3E3"
+            android:textSize="@dimen/text_large"
+            tools:text="Dzisiaj: 40%" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:gravity="center"
+            android:text="@string/previous_new_moon"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/new_moon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/text_small"
+            tools:text="12.03.2020" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/next_full_moon"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/full_moon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/text_small"
+            tools:text="01.04.2020" />
+
+        <Button
+            android:id="@+id/full_moons_yearly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:text="@string/yearly_full_moons"
+            android:textSize="@dimen/text_small" />
+
+        <Button
+            android:id="@+id/send_to_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:text="@string/settings"
+            android:textSize="@dimen/text_small" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

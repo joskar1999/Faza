@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".activities.SettingsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:text="@string/settings"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/text_title"
+        app:layout_constraintBottom_toTopOf="@+id/settings_radio_group_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/settings_radio_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:text="@string/phase_algorithm"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/text_large" />
+
+        <RadioGroup
+            android:id="@+id/algorithms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/alg_simple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorAccent"
+                android:onClick="onAlgorithmSelectClicked"
+                android:text="@string/algorithm_simple"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/text_large" />
+
+            <RadioButton
+                android:id="@+id/alg_conway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorAccent"
+                android:onClick="onAlgorithmSelectClicked"
+                android:text="@string/algorithm_conway"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/text_large" />
+
+            <RadioButton
+                android:id="@+id/alg_trig_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorAccent"
+                android:onClick="onAlgorithmSelectClicked"
+                android:text="@string/algorithm_trig_primary"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/text_large" />
+
+            <RadioButton
+                android:id="@+id/alg_trig_secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorAccent"
+                android:onClick="onAlgorithmSelectClicked"
+                android:text="@string/algorithm_trig_secondary"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/text_large" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/chosen_hemisphere"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/text_large" />
+
+        <RadioGroup
+            android:id="@+id/hemispheres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/hemisphere_north"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorAccent"
+                android:onClick="onSelectHemisphereClicked"
+                android:text="@string/northern_hemisphere"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/text_large" />
+
+            <RadioButton
+                android:id="@+id/hemisphere_south"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorAccent"
+                android:onClick="onSelectHemisphereClicked"
+                android:text="@string/southern_hemisphere"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/text_large" />
+        </RadioGroup>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

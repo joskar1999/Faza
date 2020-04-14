@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MoonTracker</string>
+    <string name="yearly_full_moons">Pełnie w roku</string>
+    <string name="moon_image">Moon image</string>
+    <string name="northern_hemisphere">Półkula pólnocna</string>
+    <string name="southern_hemisphere">Półkula południowa</string>
+    <string name="settings">Ustawienia</string>
+    <string name="phase_algorithm">Algorytm obliczania fazy</string>
+    <string name="chosen_hemisphere">Wybrana półkula</string>
+    <string name="algorithm_simple">Prosty</string>
+    <string name="algorithm_conway">Conway</string>
+    <string name="algorithm_trig_primary">Trygonometryczny 1</string>
+    <string name="algorithm_trig_secondary">Trygonometryczny 2</string>
+    <string name="previous_new_moon">Poprzedni nów:</string>
+    <string name="next_full_moon">Następna pełnia</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+</resources>
